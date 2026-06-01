@@ -38,8 +38,8 @@ Full-stack inventory and order management app built with React, FastAPI, Postgre
 
 4. Open the app:
 
-   - Frontend: http://localhost:5173
-   - Backend API docs: http://localhost:8000/docs
+   - Frontend: [http://localhost:5173](https://frontend-akshit9582.vercel.app)
+   - Backend API docs:[ http://localhost:8000/docs](https://inventory-order-api-ka3a.onrender.com)
    - Health check: http://localhost:8000/health
 
 ## API Endpoints
