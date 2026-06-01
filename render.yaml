@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: inventory-order-api
+    env: docker
+    plan: free
+    rootDir: backend
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: inventory-order-db
+          property: connectionString
+      - key: FRONTEND_ORIGIN
+        sync: false
+      - key: ENVIRONMENT
+        value: production
+
+databases:
+  - name: inventory-order-db
+    plan: free

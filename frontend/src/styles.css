@@ -1,0 +1,460 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #17211d;
+  background: #f6f7f4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+.appShell {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: #1e2b25;
+  color: #f7fbf6;
+  padding: 24px 18px;
+}
+
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.brand strong {
+  display: block;
+  font-size: 1.1rem;
+}
+
+.brand span,
+.eyebrow,
+.card span,
+.order span {
+  color: #6c766f;
+  font-size: 0.86rem;
+}
+
+.brand span {
+  color: #bfd1c7;
+}
+
+.nav {
+  display: grid;
+  gap: 8px;
+}
+
+.nav button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 42px;
+  border-radius: 8px;
+  padding: 0 12px;
+  background: transparent;
+  color: #dce8e1;
+  text-align: left;
+}
+
+.nav button.active,
+.nav button:hover {
+  background: #f5b84b;
+  color: #162019;
+}
+
+.main {
+  padding: 28px;
+  overflow-x: hidden;
+}
+
+.topbar,
+.panelHead,
+.orderTotal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.topbar {
+  margin-bottom: 18px;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+.iconText,
+.primary,
+.actions button,
+td button,
+.orderTotal button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 38px;
+  border-radius: 8px;
+  padding: 0 12px;
+}
+
+.iconText {
+  background: #ffffff;
+  color: #26342d;
+  border: 1px solid #dce2dd;
+}
+
+.primary {
+  background: #2f6f5e;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 38px;
+  border-radius: 8px;
+  padding: 0 12px;
+  background: #edf3ef;
+  color: #25352e;
+  font-weight: 700;
+}
+
+.stack {
+  display: grid;
+  gap: 18px;
+}
+
+.metricGrid,
+.contentGrid {
+  display: grid;
+  gap: 16px;
+}
+
+.metricGrid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.contentGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.metric,
+.panel,
+.card,
+.order {
+  background: #ffffff;
+  border: 1px solid #dfe5e0;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(24, 38, 32, 0.06);
+}
+
+.metric {
+  padding: 18px;
+}
+
+.metric span {
+  color: #59655e;
+  font-size: 0.88rem;
+}
+
+.metric strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 2rem;
+}
+
+.panel {
+  padding: 18px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(140px, 1fr));
+  align-items: end;
+  gap: 14px;
+}
+
+.formGrid h2 {
+  grid-column: 1 / -1;
+}
+
+label {
+  display: grid;
+  gap: 7px;
+  color: #344039;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 40px;
+  border-radius: 8px;
+  border: 1px solid #cfd8d2;
+  background: #fbfcfb;
+  padding: 0 10px;
+  color: #162019;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #f5b84b;
+  border-color: #9a6b10;
+}
+
+.alert {
+  margin-bottom: 14px;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-weight: 700;
+}
+
+.error {
+  background: #fee5df;
+  color: #9a2d1c;
+}
+
+.success {
+  background: #dff5e8;
+  color: #1f6b42;
+}
+
+.neutral {
+  background: #edf0f4;
+  color: #44505c;
+}
+
+.search {
+  position: relative;
+  width: min(280px, 100%);
+}
+
+.search svg {
+  position: absolute;
+  left: 10px;
+  bottom: 12px;
+  color: #6b756f;
+}
+
+.search input {
+  padding-left: 34px;
+}
+
+.lineItems {
+  display: grid;
+  grid-column: span 3;
+  gap: 10px;
+}
+
+.lineItem {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) 110px 38px;
+  align-items: end;
+  gap: 10px;
+}
+
+.removeLine {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  min-height: 40px;
+  border-radius: 8px;
+  background: #edf3ef;
+  color: #25352e;
+}
+
+.removeLine:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.card {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+}
+
+.card strong,
+.order strong {
+  display: block;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.actions button,
+td button,
+.orderTotal button {
+  width: 38px;
+  padding: 0;
+  background: #edf3ef;
+  color: #25352e;
+}
+
+.actions button:hover,
+td button:hover,
+.orderTotal button:hover {
+  background: #ffe4ae;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+th,
+td {
+  padding: 12px 10px;
+  text-align: left;
+  border-bottom: 1px solid #e8ece8;
+  white-space: nowrap;
+}
+
+th {
+  color: #58645e;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+}
+
+.orderList {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.order {
+  padding: 14px;
+}
+
+.order ul {
+  margin: 12px 0;
+  padding-left: 18px;
+  color: #344039;
+}
+
+.empty {
+  color: #69746e;
+  margin-top: 12px;
+}
+
+@media (max-width: 980px) {
+  .appShell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    padding: 14px;
+  }
+
+  .brand {
+    margin-bottom: 12px;
+  }
+
+  .nav {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .nav button {
+    justify-content: center;
+    padding: 0 8px;
+  }
+
+  .metricGrid,
+  .contentGrid,
+  .formGrid,
+  .lineItems {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lineItems {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .main {
+    padding: 18px 14px;
+  }
+
+  .topbar,
+  .panelHead {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .metricGrid,
+  .contentGrid,
+  .formGrid,
+  .lineItems,
+  .lineItem {
+    grid-template-columns: 1fr;
+  }
+
+  .lineItem {
+    align-items: stretch;
+  }
+
+  h1 {
+    font-size: 1.55rem;
+  }
+}
