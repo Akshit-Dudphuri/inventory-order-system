@@ -2,6 +2,13 @@
 
 Full-stack inventory and order management app built with React, FastAPI, PostgreSQL, Docker, and Docker Compose.
 
+## Live Deliverables
+
+- GitHub repository: https://github.com/Akshit-Dudphuri/inventory-order-system
+- Docker Hub backend image: https://hub.docker.com/r/akshitdudphuri/inventory-order-backend
+- Live frontend: https://frontend-akshit9582.vercel.app
+- Live backend API: https://inventory-order-api-ka3a.onrender.com
+
 ## Features
 
 - Product CRUD with unique SKU validation
